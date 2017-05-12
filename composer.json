@@ -1,0 +1,20 @@
+{
+    "name": "shopeca/gpc-parser",
+    "authors": [
+        {
+            "name": "Tom Hnatovsky",
+            "email": "tomas@hnatovsky.cz"
+        }
+    ],
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/Shopeca/gpc-parser.git"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Shopeca\\Parser\\Gpc\\": "src/"
+		}
+	}
+}
