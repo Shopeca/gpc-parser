@@ -24,7 +24,8 @@
 
 		private function processLine ($line, $index)
 		{
-			if (strlen($line) === 128) {
+			$lineLength = strlen($line);
+			if ($lineLength >= 128 || $lineLength <= 130) {
 				$type = substr($line, 0, 3);
 				if ($type == "074") {
 					return $this->processHeading($line);
@@ -36,6 +37,7 @@
 			} else {
 				$this->errors[] = "Line $index has wrong length";
 			}
+			return false;
 		}
 
 		private function processHeading ($line)
